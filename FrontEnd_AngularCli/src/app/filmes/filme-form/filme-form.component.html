@@ -1,0 +1,32 @@
+<br/>
+
+<form #cadastro="ngForm" (ngSubmit)="salvarFilme()">
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="txtCodigo">Código:</label>
+      <input type="text" [(ngModel)]="filme.codigo" name="txtCodigo" class="form-control" id="txtCodigo" disabled>
+    </div>
+    <div class="form-group col-md-10">
+      <label for="txtNomeFilme">Nome do filme:</label>
+      <input type="text" [(ngModel)]="filme.nome" #txtNomeFilme="ngModel" name="txtNomeFilme" minlength="5"
+        class="form-control" id="txtNomeFilme" placeholder="Digite o nome do filme">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="txtGenero">Gênero:</label>
+      <input type="text" [(ngModel)]="filme.genero" #txtGenero="ngModel" name="txtGenero" minlength="5"
+        class="form-control" id="txtGenero" placeholder="Digite o gênero do filme">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="txtAnoLancamento">Ano de lançamento:</label>
+      <input type="text" [(ngModel)]="filme.anoLancamento" #txtAnoLancamento="ngModel" name="txtAnoLancamento"
+        minlength="1" maxlength="4" class="form-control" id="txtAnoLancamento" placeholder="Digite um ano">
+    </div>
+  </div>
+  <div class="container">
+    <button class="btn btn-success" type="submit" [disabled]="cadastro.form.invalid">Enviar</button>
+    <button class="btn btn-danger" type="button" [hidden]="isNew" (click)="excluir()">Excluir</button>
+    <button class="btn btn-warning" type="button" (click)="cancelar()">Cancelar</button>
+  </div>
+</form>

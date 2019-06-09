@@ -1,0 +1,30 @@
+<br/>
+
+<form #cadastro="ngForm" (ngSubmit)="salvar()">
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="codigoTrilha">Código:</label>
+      <input type="text" [(ngModel)]="trilha.codigo" name="txtCodigo" class="form-control" id="codigoTrilha" placeholder="Código" disabled>
+    </div>
+    <div class="form-group col-md-10">
+      <label for="nomeTrilha">Nome da música:</label>
+      <input type="text" [(ngModel)]="trilha.nomeMusica" name="nomeTrilha" #nome="ngModel" minlength="5" class="form-control" id="nomeTrilha" placeholder="Digite o nome da música">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="artistaInterprete">Artista Intéprete:</label>
+      <input type="text" [(ngModel)]="trilha.artistaInterprete" name="artistaInterprete" #nome="ngModel" minlength="5" class="form-control" id="artistaInterprete" placeholder="Digite o artista intérprete">
+    </div>
+    <div class="form-group col-md-9">
+      <label for="filmeTrilha">Filme:</label>
+      <input type="text" [(ngModel)]="trilha.filme" name="filmeTrilha" #nome="ngModel" minlength="5" class="form-control" id="filmeTrilha" placeholder="Digite o filme que contém esta música">
+    </div>
+  </div>
+  <div class="container">
+    <button class="btn btn-success" type="submit" [disabled]="cadastro.form.invalid">Enviar</button>
+    <button class="btn btn-danger" type="button" [hidden]="isNew" (click)="excluir()">Excluir</button>
+    <button class="btn btn-warning" type="button" (click)="cancelar()">Cancelar</button>
+  </div>
+</form>

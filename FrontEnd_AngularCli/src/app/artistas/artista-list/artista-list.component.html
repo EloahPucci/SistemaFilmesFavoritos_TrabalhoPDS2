@@ -1,0 +1,21 @@
+<br/>
+<input type="text" [(ngModel)]="searchText" class="form-control" placeholder="O que você está procurando?"/><br/>
+
+<table class="table table-hover">
+  <thead>
+      <tr>
+          <th>Código</th>
+          <th>Nome do Artista</th>
+          <th>Filmes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let artistaTabela of artistas | filter:searchText">
+        <a [routerLink]="artistaTabela.codigo">
+          <td>{{artistaTabela.codigo}}</td> </a>
+          <td>{{artistaTabela.nomeArtista}}</td>
+          <td>{{artistaTabela.filmes}}</td>
+      </tr>
+  </tbody>
+</table>
+<span [hidden]="(artistas | filter: searchText).length != 0">Infelizmente não temos o que você está procurando.</span>

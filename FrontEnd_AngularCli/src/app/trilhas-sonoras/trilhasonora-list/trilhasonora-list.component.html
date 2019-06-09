@@ -1,0 +1,22 @@
+<br/>
+<input type="text" [(ngModel)]="searchText" class="form-control" placeholder="O que você está procurando?"/><br/>
+
+<table class="table table-hover">
+  <thead>
+      <tr>
+          <th>Código</th>
+          <th>Nome da Música</th>
+          <th>Artista Intérprete</th>
+          <th>Filme</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let trilhasonoraTabela of trilhas_sonoras">
+        <a [routerLink]="trilhasonoraTabela.codigo">
+          <td>{{trilhasonoraTabela.codigo}}</td> </a>
+          <td>{{trilhasonoraTabela.nomeMusica}}</td>
+          <td>{{trilhasonoraTabela.artistaInterprete}}</td>
+          <td>{{trilhasonoraTabela.filme}}</td>
+      </tr>
+  </tbody>
+</table>

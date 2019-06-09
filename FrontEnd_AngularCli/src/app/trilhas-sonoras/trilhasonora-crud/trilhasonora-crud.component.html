@@ -1,0 +1,30 @@
+<router-outlet></router-outlet>
+<br />
+
+<div class="card">
+  <div class="card-body">
+    <h4 class="text-center text-primary">CADASTRO DE TRILHAS SONORAS</h4>
+  </div>
+</div>
+
+<br/>
+
+<ul class="nav nav-tabs" id="trilhasTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="cadastro-tab" data-toggle="tab" href="#cadastro" aria-controls="tabCadastro"
+      aria-selected="true">Cadastro</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="dados-tab" data-toggle="tab" href="#dados" aria-selected="false">Dados</a>
+  </li>
+</ul>
+<div class="tab-content" id="trilhaTabContent">
+  <div class="tab-pane fade show active" id="cadastro" role="tabpanel">
+    <app-trilhasonora-form></app-trilhasonora-form>
+  </div>
+  <div class="tab-pane fade" id="dados" role="tabDados">
+    <div role="tabpanel" class="tab-pane" id="dados">
+      <app-trilhasonora-list></app-trilhasonora-list>
+    </div>
+  </div>
+</div>
