@@ -19,7 +19,13 @@ export class LoginComponent implements OnInit {
     private authService: LoginServiceService) { }
 
     onSignin() {      
-      this.authService.signIn(this.form.value);
+      let result;
+      result = this.authService.signIn(this.form.value);
+    result.subscribe(data => alert('logado com sucesso ' + data),
+    err => {
+      alert("An error occurred. " + err);
+    });
+      
       console.log(this.data);
     }
 

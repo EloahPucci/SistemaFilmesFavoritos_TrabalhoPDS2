@@ -24,7 +24,7 @@ import com.eloahpucci.sistemafilmesfavoritos.respository.ArtistaRepository;
 
 @RestController
 @RequestMapping(value="/artistas")
-@CrossOrigin(origins = "http://localhost")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ArtistaResource {
 	
 	@Autowired

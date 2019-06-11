@@ -1,4 +1,4 @@
-<h5>Login</h5>
+<!-- <h5>Login</h5>
 <div class="row">
   <form [formGroup]="form" (ngSubmit)="onSignin()">
     <div class="row">
@@ -22,4 +22,22 @@
       </div>
     </div>
   </form>
+</div> -->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <br/>
+    <div class="fadeIn first">
+      <h5>Login</h5>
+    </div>
+    <form [formGroup] = "form" (ngSubmit) = "onSignin()">
+      <input type="email" id="email" class="fadeIn second validate" placeholder="email" formControlName="email"
+      [class.invalid]="form.controls['email'].touched && !form.controls['email'].valid" [(ngModel)]="data.email">
+
+      <input type="password" id="password" class="fadeIn third validate" placeholder="senha" formControlName="password"
+              [class.invalid]="form.controls['password'].touched && !form.controls['password'].valid" [(ngModel)]=data.password>
+
+      <input type="submit" class="fadeIn fourth" value="Entrar" [disabled]="!form.valid" >
+    </form>
+  </div>
 </div>

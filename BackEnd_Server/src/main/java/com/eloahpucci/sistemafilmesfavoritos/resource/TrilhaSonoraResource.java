@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -23,9 +24,10 @@ import com.eloahpucci.sistemafilmesfavoritos.respository.TrilhaSonoraRepository;
 
 @RestController
 @RequestMapping(value="/trilhas")
-@CrossOrigin(origins = "http://localhost")
+@CrossOrigin(origins = "http://localhost:4200")
 public class TrilhaSonoraResource {
 	
+	@Autowired
 	private TrilhaSonoraRepository service;
 	
 	@GetMapping

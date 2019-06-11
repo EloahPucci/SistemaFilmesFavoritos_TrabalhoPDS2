@@ -14,7 +14,7 @@
       <tr *ngFor="let filmeTabela of filmes | filterFilme: searchText">
         <a [routerLink]="filmeTabela.codigo">
           <td>{{filmeTabela.codigo}}</td> </a>
-          <td>{{filmeTabela.nome}}</td>
+          <td>{{filmeTabela.nomeFilme}}</td>
           <td>{{filmeTabela.genero}}</td>
           <td>{{filmeTabela.anoLancamento}}</td>
       </tr>
