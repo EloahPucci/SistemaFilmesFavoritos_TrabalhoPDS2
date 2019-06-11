@@ -47,7 +47,8 @@ export class LoginServiceService {
   logout() {
     this.authenticated = false;
     this.showNavBar(false);
-    this.router.navigate(['/signin']);
+    alert("Desconectado com sucesso!");
+    this.router.navigate(['/home']);
   }
 
   isAuthenticated() {
