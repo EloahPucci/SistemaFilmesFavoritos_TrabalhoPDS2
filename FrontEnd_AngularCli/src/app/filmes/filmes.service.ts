@@ -6,12 +6,11 @@ import { Filme } from './filme';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
-import { getAllDebugNodes } from '@angular/core/src/debug/debug_node';
 
 @Injectable()
 export class FilmesService {
 
-  private url: string = 'http://localhost:9090/filmes';
+  private url: string = 'http://localhost:3000/filmes';
 
   filmesChanged = new EventEmitter<Observable<Filme[]>>();
 
