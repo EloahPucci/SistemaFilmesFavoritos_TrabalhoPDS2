@@ -6,7 +6,7 @@ import { Artista } from './artista';
 @Injectable()
 export class ArtistasService {
 
-  private url: string = 'http://localhost:9090/artistas';
+  private url: string = 'http://localhost:3000/artistas';
 
   artistasChanged = new EventEmitter<Observable<Artista[]>>();
 
