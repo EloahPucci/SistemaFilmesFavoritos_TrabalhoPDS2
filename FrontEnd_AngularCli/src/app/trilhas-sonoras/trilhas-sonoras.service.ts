@@ -10,7 +10,7 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class TrilhasSonorasService {
 
-  private url: string = 'http://localhost:9090/trilhas';
+  private url: string = 'http://localhost:3000/trilhasSonoras';
 
   trilhasChanged = new EventEmitter<Observable<TrilhaSonora[]>>();
 

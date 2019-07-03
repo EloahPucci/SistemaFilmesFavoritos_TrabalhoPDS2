@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { stringify } from 'querystring';
 
 @Pipe({
-    name: 'filter'
+    name: 'filterArtista'
 })
 
 export class FilterPipe implements PipeTransform {

@@ -10,7 +10,7 @@
       </tr>
   </thead>
   <tbody>
-      <tr *ngFor="let artistaTabela of artistas | filter:searchText">
+      <tr *ngFor="let artistaTabela of artistas | filterArtista:searchText">
         <a [routerLink]="artistaTabela.codigo">
           <td>{{artistaTabela.codigo}}</td> </a>
           <td>{{artistaTabela.nomeArtista}}</td>
@@ -18,4 +18,4 @@
       </tr>
   </tbody>
 </table>
-<span [hidden]="(artistas | filter: searchText).length != 0">Infelizmente não temos o que você está procurando.</span>
+<span [hidden]="(artistas | filterArtista: searchText).length != 0">Infelizmente não temos o que você está procurando.</span>

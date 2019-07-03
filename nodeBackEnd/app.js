@@ -21,10 +21,12 @@ db.authenticate()
 const index = require('./routes/index');
 const filmes = require('./routes/filmes');
 const artistas = require('./routes/artistas');
+const trilhasSonoras = require('./routes/trilhasSonoras');
 
  app.use('/', index);
  app.use('/filmes', filmes);
  app.use('/artistas', artistas);
+ app.use('/trilhasSonoras', trilhasSonoras);
 
 // const bodyParser = require("body-parser");
 // app.use(bodyParser.urlencoded({ extended: false }));
